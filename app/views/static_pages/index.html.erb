@@ -16,7 +16,8 @@
 
       var htmlString = '';
       $.each(data, function(index, task){
-        var liElement = '<li><div class="view"><input class="toggle" type="checkbox"><label>' + task.title + '</labek></div></li>';
+        var check = task.done ? 'checked' : '';
+        var liElement = '<li><div class="view"><input class="toggle" type="checkbox"'+ check + '><label>' + task.title + '</labek></div></li>';
         htmlString += liElement;
 
       });
